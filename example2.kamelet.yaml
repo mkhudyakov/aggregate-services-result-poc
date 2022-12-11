@@ -30,7 +30,6 @@ spec:
     - "camel:kamelet"
     - "camel:core"
     - "camel:timer"
-    - "org.apache.camel.example:kamelet-main-core"
   template:
     from:
       uri: "timer:example"
