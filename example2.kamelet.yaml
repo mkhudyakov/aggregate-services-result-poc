@@ -1,7 +1,7 @@
 apiVersion: camel.apache.org/v1alpha1
 kind: Kamelet
 metadata:
-  name: example
+  name: example2
   annotations:
     camel.apache.org/kamelet.support.level: "Stable"
     camel.apache.org/catalog.version: "main-SNAPSHOT"
