@@ -1,7 +1,7 @@
 apiVersion: camel.apache.org/v1alpha1
 kind: Kamelet
 metadata:
-  name: example2
+  name: sample
   annotations:
     camel.apache.org/kamelet.support.level: "Stable"
     camel.apache.org/catalog.version: "main-SNAPSHOT"
@@ -30,14 +30,14 @@ spec:
     - "camel:kamelet"
     - "camel:core"
     - "camel:timer"
-    - "org.apache.camel.example:kamelet-main-core"
+    - "mvn:org.apache.camel.example:kamelet-main-core:1.0.0-SNAPSHOT"
   template:
     from:
       uri: "timer:example"
       parameters:
         period: "{{period}}"
       steps:
-#        - bean: "com.camelet.test.beans.DefaultProcessor"
+        #        - bean: "com.camelet.test.beans.DefaultProcessor"
         - bean: "myBean"
         - set-body:
             constant: "Test Log"
